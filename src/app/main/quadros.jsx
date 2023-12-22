@@ -4,6 +4,8 @@ import QuadroLogo from "@/components/QuadroLogo";
 import QuadroResumo from "@/components/QuadroResumo";
 
 import Quadro from "@/components/Quadro";
+import QuadroDiaAnterior from "@/components/QuadroDiaAnterior";
+
 import QuadoPrecoMedio from "@/components/QuadoPrecoMedio";
 import QuadroHistorico from "@/components/QuadroHistorico";
 import SetMealIcon from "@mui/icons-material/SetMeal";
@@ -94,7 +96,7 @@ function buildStockLineData(
       ))}
 
       {/* queda de 2% ou mais comparado ao preco atual 'flag'*/}
-      <Quadro
+      <QuadroDiaAnterior
         title={"Preço Anterior"}
         hPercent={dadosDeOntem.toMaxValue.percentage}
         hPrice={ontem.high}
